@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Our Love Story</title>
+	<title>Muxin ❤ Shixue</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<style type="text/css">
 		@font-face {
@@ -16,63 +16,74 @@
 </head>
 
 <body>
+	<!-- muslc play -->
+	<audio autoplay="autoplay" loop="loop">
+		<source src="resources/转动命运之轮.mp3" />
+	</audio>
 	<div id="mainDiv">
 		<div id="content">
-			<div id="code">
-				<span class="comments">/**</span><br />
-				<span class="space"/><span class="comments">* We are both Fudan SSers and programmers,</span><br />
-				<span class="space"/><span class="comments">* so I write some code to celebrate our 1st anniversary.</span><br />
-				<span class="space"/><span class="comments">*/</span><br />
-				Boy i = <span class="keyword">new</span> Boy(<span class="string">"hackerzhou"</span>);<br />
-				Girl u = <span class="keyword">new</span> Girl(<span class="string">"MaryNee"</span>);<br />
-				<span class="comments">// Nov 2, 2010, I told you I love you. </span><br />
-				i.love(u);<br />
-				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
-				u.accepted();<br />
-				<span class="comments">// Since then, I miss u every day.</span><br />
-				i.miss(u);<br />
-				<span class="comments">// And take care of u and our love.</span><br />
-				i.takeCareOf(u);<br />
-				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
-				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
-				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
-				<span class="keyword">while</span> (isHesitate) {<br />
-				<span class="placeholder"/>i.waitFor(u);<br />
-				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
-				<span class="placeholder"/><span class="comments">// and you should think it over.</span><br />
-				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
-				}<br />
-				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
-				i.marry(u);<br />
-				i.liveHappilyWith(u);<br />
+			<div id="code" style="background-image:url(resources/muxin.png);">
+				23年前，我出生在皖北的小城里。<br />
+				<br />
+				3 年后，你降临在皖南的小镇上。<br />
+				<br />
+				此后的18年，我们各自成长，生活毫无交集……<br />
+				<br />
+				突然有一天，我们互相闯入了彼此的世界。<br />
+				<br />
+				还记得刚相识时我的羞涩嘛。<br />
+				<br />
+				后来因为一些原因，我们闹了不愉快……<br />
+				<br />
+				经过曲折的路后，我们在新年的第一天在一起了O(∩_∩)O~ <br />
+				<span class="comments">// 说好的2014年在一起呢，哼</span><br />
+				<br />
+				最开始你不太敢亲近我，后来渐渐变得对感情也坚定了。<br />
+				<br />
+				我希望我可以一直守在你身边，慢慢地温暖你的❤<br />
+				<br />
+				正如这音乐，转动命运之轮<br />
+				<br />
+				命运把我们从18年的平行线上拉到了一起。<br />
+				<br />
+				我希望我们接下来的路都一起走，<br />
+				<br />
+				以后的事情都一起做，<br />
+				<br />
+				困难也一起面对，迷茫害怕的时候看看身旁，有我呢~<br />
+				<br />
+				阜阳，合肥，南京<br />
+				<br />
+				下一站会是哪里呢？
+				<br />
 			</div>
 			<div id="loveHeart">
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
-						Minyue, I have fallen in love with you for
+						Muxin, we have fallen in love with each other for
 						<div id="elapseClock"></div>
 					</div>
 					<div id="loveu">
-						Love u forever and ever.<br/>
-						<div class="signature">- hackerzhou</div>
+						Our love will go on.<br/>
+						<div class="signature">- Shixue</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="copyright">
-			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
-			Copyright © 2011 <a href='http://hackerzhou.me'>hackerzhou.me</a> 2009-2011
+			Inspired by <a href="http://hackerzhou.me">hackerzhou</a><br />
+			Copyright © 2015 <a href='https://github.com/h2597650/love'>h2597650</a> 2014-2015
 		</div>
 	</div>
 	<script type="text/javascript">
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date();
-		together.setFullYear(2010, 10, 2);
-		together.setHours(20);
+		together.setFullYear(2015, 1, 19);
+		together.setHours(0);
 		together.setMinutes(0);
-		together.setSeconds(0);
+		together.setSeconds(39);
 		together.setMilliseconds(0);
 		
 		if (!document.createElement('canvas').getContext) {
