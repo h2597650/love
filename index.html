@@ -12,13 +12,18 @@
 	<link href="css/default.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
 </head>
 
 <body>
 	<!-- muslc play -->
 	<audio autoplay="autoplay" loop="loop">
 		<source src="resources/转动命运之轮.mp3" />
+	</audio>
+	<audio id="sound">
+		<source src="resources/type.ogg" type="audio/ogg" />
+		<source src="resources/type.mp3" type="audio/mpeg" />
+		Your browser does not support HTML5 audio.
 	</audio>
 	<div id="mainDiv">
 		<div id="content">
@@ -96,17 +101,19 @@
 			$("#copyright").css("bottom", "10px");
 		    document.execCommand("stop");
 		} else {
+	
 			setTimeout(function () {
 				startHeartAnimation();
-			}, 5000);
+			}, 3000);
 
 			timeElapse(together);
 			setInterval(function () {
 				timeElapse(together);
 			}, 500);
-
+			
 			adjustCodePosition();
-			$("#code").typewriter();
+			$("#code").delay(500).fadeIn(10000).typewriter();
+			
 		}
 	</script>
 </body>

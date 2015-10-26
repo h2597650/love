@@ -73,25 +73,31 @@ function startHeartAnimation() {
 (function($) {
 	$.fn.typewriter = function() {
 		this.each(function() {
-			var $ele = $(this), str = $ele.html(), progress = 0;
+			var $ele = $(this), text = $ele.html(), progress = 0, maxSpeed = 150, minSpeed = 75, rand;
 			$ele.html('');
-			var timer = setInterval(function() {
-				var current = str.substr(progress, 1);
-				if (current == '<') {
-					progress = str.indexOf('>', progress) + 1;
-				} else {
-					progress++;
-				}
-				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
-				if (progress >= str.length) {
-					clearInterval(timer);
-				}
-			}, 75);
+			/* type sound */
+			$audio = $("#sound")[0];
+			/* random typing speed to make it more real */
+			(function loop() {
+			    setTimeout(function() {
+			    	rand = Math.round(Math.random() * (maxSpeed - minSpeed)) + minSpeed
+					var current = text.substr(progress, 1);
+					progress = (current == '<' ? text.indexOf('>', progress) : progress) + 1;
+					$ele.html(text.substr(0, progress) + ((progress & 1) && progress < text.length ? '_' : ''));
+					if ($audio.ended || $audio.paused) $audio.play();
+					if (progress < text.length) loop();  
+					else $audio.pause();
+			    }, rand);
+			}());
 		});
 		return this;
 	};
 })(jQuery);
 
+function sleep(d){
+	for(var t = Date.now();Date.now() - t <= d;);
+}
+			
 function timeElapse(date){
 	var current = Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
@@ -124,7 +130,7 @@ function showMessages() {
 function adjustWordsPosition() {
 	$('#words').css("position", "absolute");
 	$('#words').css("top", $("#garden").position().top + 195);
-	$('#words').css("left", $("#garden").position().left + 200);
+	$('#words').css("left", $("#garden").position().left + 70);
 }
 
 function adjustCodePosition() {
