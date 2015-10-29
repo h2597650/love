@@ -12,7 +12,7 @@
 	<link href="css/default.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
 </head>
 
 <body>
@@ -104,7 +104,7 @@
 	
 			setTimeout(function () {
 				startHeartAnimation();
-			}, 2000);
+			}, 3000);
 
 			timeElapse(together);
 			setInterval(function () {
@@ -112,7 +112,9 @@
 			}, 500);
 			
 			adjustCodePosition();
-			$("#code").delay(1500).fadeIn(7000).typewriter();
+			setTimeout(function () {
+				$("#code").fadeIn(7000).typewriter();
+			}, 1000);
 			
 		}
 	</script>
